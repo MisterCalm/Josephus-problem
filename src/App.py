@@ -12,7 +12,7 @@ def showResults():
 master = tk.Tk()
 master.title("Josephus")
 master.minsize(width=800, height=250)
-master.configure(bg="pink")
+master.configure(bg="crimson")
 tk.Label(master, text="Please Enter Number Of Person In Josephus Problem : ").place(relx=0.2, rely=0.1)
 tk.Label(master, text="Please Enter The Number Of Times To Proceed : ").place(relx=0.2, rely=0.2)
 
