@@ -2,7 +2,7 @@ from tkinter import*
 
 import math
 
-from tkinter import ttk
+import time
 
 root = Tk()
 
@@ -55,4 +55,18 @@ def drawNodes(arr):
 
         y=300+250*(math.sin(i*nodeAngel))
 
-root.mainloop()
+def display(mainArr):
+
+    for i in mainArr:
+
+        drawNodes(i)
+
+        time.sleep(2)
+
+        c.update()
+
+        c.delete('all')
+
+    drawNodes(mainArr[-1])
+
+    root.mainloop()
