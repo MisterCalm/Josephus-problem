@@ -40,9 +40,7 @@ def Josephus(n, k):
 
         i += 1
 
-    print(finalResult)
-
-    return mainList[0]
+    return finalResult
 
 
 def generatorBegin(start, k, mainList):
