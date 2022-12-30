@@ -1,6 +1,6 @@
 import tkinter as tk
 from src.Algorithm import Josephus
-from src.CircularGraph import*
+from src.CircularGraph import *
 
 
 def showResults():
@@ -23,6 +23,6 @@ e2 = tk.Entry(master)
 e1.place(relx=0.6, rely=0.1)
 e2.place(relx=0.6, rely=0.2)
 
-tk.Button(master, text='Show', command=showResults, height=2, width=40 , bg= "purple").place(relx=0.5, rely=0.5, anchor="center")
+tk.Button(master, text='Show', command=showResults, height=2, width=40, bg="purple").place(relx=0.5, rely=0.5, anchor="center")
 
 tk.mainloop()

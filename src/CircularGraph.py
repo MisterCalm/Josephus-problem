@@ -21,9 +21,13 @@ root.withdraw()
 
 
 def create_circle(x, y, r, canvasName):
+
     x0 = x - r
+
     y0 = y - r
+
     x1 = x + r
+
     y1 = y + r
 
     return canvasName.create_oval(x0, y0, x1, y1, fill='orange', width=1.5)
@@ -32,6 +36,7 @@ def create_circle(x, y, r, canvasName):
 # x0=300 y0=300 R=250
 
 def drawNodes(arr):
+
     n = len(arr)
 
     nodeRadius = int(1571 / (2 * n))
@@ -49,6 +54,7 @@ def drawNodes(arr):
             nodeRadius = 46
 
         if n == 1:
+
             x = 300
 
             y = 300
@@ -63,9 +69,11 @@ def drawNodes(arr):
 
 
 def display(mainArr):
+
     root.deiconify()
 
     for i in mainArr:
+
         drawNodes(i)
 
         c.update()
