@@ -1,11 +1,9 @@
 def Josephus(n, k):
-
     finalResult = []
     beginIndexes = []
     mainList = []
 
     for i in range(1, n + 1):
-
         mainList.append(i)
 
     begin = k - 1
@@ -19,7 +17,6 @@ def Josephus(n, k):
             first = []
 
             for i in range(1, n + 1):
-
                 first.append(i)
 
             finalResult.append(first)
@@ -33,22 +30,27 @@ def Josephus(n, k):
         del mainList[beginIndexes[-1]:: k]
 
         for i in mainList:
-
             secondList.append(i)
 
         finalResult.append(secondList)
 
         i += 1
 
-    return finalResult
+        newFinalResult = []
+
+        for i in finalResult:
+
+            if i not in newFinalResult:
+
+                newFinalResult.append(i)
+
+    return newFinalResult
 
 
 def generatorBegin(start, k, mainList):
-
     secondList = []
 
     for i in mainList:
-
         secondList.append(i)
 
     mainLength = len(mainList)

@@ -6,9 +6,12 @@ import time
 
 root = Tk()
 
-root.geometry("900x600")
+root.geometry("900x600+280+90")
 
 root.title("Josephus problem")
+
+
+root.config(bg="purple")
 
 c = Canvas(root, width=600, height=600)
 
@@ -69,7 +72,7 @@ def display(mainArr):
 
         c.delete('all')
 
-        time.sleep(1)
+        time.sleep(2)
 
     drawNodes(mainArr[-1])
 
