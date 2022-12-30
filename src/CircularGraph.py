@@ -14,6 +14,8 @@ c = Canvas(root,width=600,height=600)
 
 c.pack()
 
+root.withdraw()
+
 def create_circle(x,y,r,canvasName):
     
     x0 = x-r
@@ -56,6 +58,8 @@ def drawNodes(arr):
         y=300+250*(math.sin(i*nodeAngel))
 
 def display(mainArr):
+
+    root.deiconify()
 
     for i in mainArr:
 

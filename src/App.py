@@ -1,11 +1,12 @@
 import tkinter as tk
-
 from src.Algorithm import Josephus
-from src.CircularGraph import display
+from src.CircularGraph import*
 
 
 def showResults():
-    print(Josephus(int(e1.get()), int(e2.get())))
+    res = Josephus(int(e1.get()), int(e2.get()))
+    master.destroy()
+    display(res)
 
 
 master = tk.Tk()
