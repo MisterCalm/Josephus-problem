@@ -6,14 +6,12 @@ import time
 
 root = Tk()
 
-root.geometry("900x600+280+90")
+root.geometry("1400x700+0+0")
 
 root.title("Josephus problem")
 
 
-root.config(bg="purple")
-
-c = Canvas(root, width=600, height=600)
+c = Canvas(root, width=1400, height=700 , bg='#007FFF')
 
 c.pack()
 
@@ -30,42 +28,44 @@ def create_circle(x, y, r, canvasName):
 
     y1 = y + r
 
-    return canvasName.create_oval(x0, y0, x1, y1, fill='orange', width=1.5)
+    return canvasName.create_oval(x0, y0, x1, y1, fill='#9F79EE', width=1.5)
 
 
-# x0=300 y0=300 R=250
+# x0=600 y0=350 R=320
 
 def drawNodes(arr):
 
     n = len(arr)
 
-    nodeRadius = int(1571 / (2 * n))
+    nodeRadius = int(1900/ (2 * n))
 
-    x = 550
+    x = 1000
 
-    y = 300
+    y = 350
 
     nodeAngel = math.pi * 2 / n
 
     for i in range(1, n + 1):
 
-        if nodeRadius > 46:
+        if nodeRadius > 27:
 
-            nodeRadius = 46
+            nodeRadius = 26
 
         if n == 1:
 
-            x = 300
+            x = 680
 
-            y = 300
+            y = 350
+
+            nodeRadius = 150
 
         create_circle(x, y, nodeRadius, c)
 
-        c.create_text(x, y, text=arr[i - 1], font=('Helvetica', nodeRadius, 'bold'))
+        c.create_text(x, y, text=arr[i - 1], font=('Helvetica',int(nodeRadius/2), 'bold'))
 
-        x = 300 + 250 * (math.cos(i * nodeAngel))
+        x = 680 + 320 * (math.cos(i * nodeAngel))
 
-        y = 300 + 250 * (math.sin(i * nodeAngel))
+        y = 350 + 320 * (math.sin(i * nodeAngel))
 
 
 def display(mainArr):
