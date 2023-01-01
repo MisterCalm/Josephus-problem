@@ -1,3 +1,7 @@
+import pandas as pd
+from tabulate import tabulate
+
+
 def Josephus(n, k):
 
     finalResult = []
@@ -70,3 +74,30 @@ def generatorBegin(start, k, mainList):
     step = k - (mainLength - 1 - (start + k * numberOfDelete)) - 1
 
     return step
+
+
+def tableGenerator(n, k):
+
+    list1 = Josephus(n, k)
+
+    for i in list1:
+
+        if len(i) != n:
+
+            while len(i) != n:
+
+                i.append(" ")
+
+    result = {}
+
+    counter = 0
+
+    for i in list1:
+
+        counter += 1
+
+        result["navigation" + str(counter)] = i
+
+    table = pd.DataFrame(result, index=list1[0])
+
+    print(tabulate(table, headers='keys', tablefmt='pretty'))
