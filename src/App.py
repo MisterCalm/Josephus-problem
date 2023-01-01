@@ -16,8 +16,6 @@ def showResults2():
 
     tableGenerator(int(e1.get()), int(e2.get()))
 
-    master.destroy()
-
 
 master = tk.Tk()
 
